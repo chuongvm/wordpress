@@ -18,12 +18,10 @@ Installing:
 2. Download "officience-product-rss.zip" file and install the "Officience Product RSS" plugin
 
 3. Cronjob setting:
-    + In your wp-config.php file, add the following line:
-        define('DISABLE_WP_CRON', true);
-    + In command line (Macos/Linux), type 
-        crontab -e
-    to open cronjob file and add following line (please replace {your_domain} with your actual value):
-        */10 * * * * /usr/local/bin/wget -q -O - "{your_domain}/wp-cron.php?doing_wp_cron"
-    + Save cronjob file
+    - In your wp-config.php file, add the following line:
+        + define('DISABLE_WP_CRON', true);
+    - Add following line (please replace {your_domain} with your actual value) into cronjob:
+        + */10 * * * * /usr/local/bin/wget -q -O - "{your_domain}/wp-cron.php?doing_wp_cron"
+    - Save cronjob file
 
 Enjoy it !
